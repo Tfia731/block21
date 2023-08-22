@@ -29,6 +29,12 @@ class ElecticCar {
     CarDescription() {
         return `${super.CarDescription()} It has a ${this.model} model, is ${this.year} year, and can travel ${this.range} range.`;
     }
+    
 };
+
+ElectricCar.prototype.getDescription = function() {
+    return `${this.year} ${this.make} ${this.model} Range:${this.range} miles`;
+}
+    
 const ElectricCar = new Tesla;
 console.log(ElectricCar.ElectricCarInfo())
